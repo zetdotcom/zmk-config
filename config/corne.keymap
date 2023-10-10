@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    flavor = "balanced";
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -23,6 +27,15 @@
         };
     };
 
+    behaviors {
+        sticky_hold: sticky_hold {
+            compatible = "zmk,behavior-tap-dance";
+            label = "STICKY_HOLD";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&kp LSHIFT>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -34,10 +47,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q             &kp W  &kp E     &kp R      &kp T                      &kp Y          &kp U         &kp I      &kp O    &kp P                 &kp RETURN
-&kp LCTRL  &lt 3 A           &kp S  &kp D     &kp F      &kp G                      &kp H          &kp J         &kp K      &kp L    &kp SEMI              &kp SQT
-&kp LSHFT  &mt LEFT_SHIFT Z  &kp X  &kp C     &kp V      &kp B                      &kp N          &kp M         &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH  &kp ESC
-                                    &kp LGUI  &lt 1 ESC  &mt LA(LS(LCTRL)) SPACE    &kp BACKSPACE  &lt 2 DELETE  &kp RALT
+&kp TAB       &kp Q             &kp W  &kp E     &kp R      &kp T                      &kp Y          &kp U         &kp I      &kp O    &kp P                 &kp RETURN
+&kp LCTRL     &lt 3 A           &kp S  &kp D     &kp F      &kp G                      &kp H          &kp J         &kp K      &kp L    &kp SEMI              &kp SQT
+&sticky_hold  &mt LEFT_SHIFT Z  &kp X  &kp C     &kp V      &kp B                      &kp N          &kp M         &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH  &kp ESC
+                                       &kp LGUI  &lt 1 ESC  &mt LA(LS(LCTRL)) SPACE    &kp BACKSPACE  &lt 2 DELETE  &kp RALT
             >;
         };
 
