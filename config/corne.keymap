@@ -13,6 +13,10 @@
     quick-tap-ms = <175>;
 };
 
+&sk {
+    quick-release;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -113,10 +117,10 @@
 
         brackets {
             bindings = <
-&trans  &kp EXCL        &kp EQUAL         &kp LPAR  &kp RPAR   &kp GT       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LT          &kp LEFT_BRACKET  &kp LBRC  &kp RBRC   &kp RBKT     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp UNDERSCORE  &kp MINUS         &kp PIPE  &kp GRAVE  &kp TILDE    &trans  &trans  &trans  &trans  &trans  &trans
-                                          &trans    &trans     &trans       &trans  &trans  &trans
+&trans  &kp EXCL        &kp EQUAL         &kp LPAR          &kp RPAR           &kp GT       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LT          &kp LEFT_BRACKET  &kp LBRC          &kp RBRC           &kp RBKT     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp UNDERSCORE  &kp MINUS         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE    &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans            &trans             &trans       &trans  &trans  &trans
             >;
 
             label = "brackets";
