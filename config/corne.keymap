@@ -31,6 +31,16 @@
             bindings = <&kp LA(TAB)>;
             key-positions = <38 0>;
         };
+
+        bootloader-left {
+            bindings = <&bootloader>;
+            key-positions = <12 17>;
+        };
+
+        bootloader-right {
+            bindings = <&bootloader>;
+            key-positions = <18 23>;
+        };
     };
 
     behaviors {
