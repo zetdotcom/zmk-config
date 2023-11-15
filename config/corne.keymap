@@ -52,12 +52,14 @@
 
             tapping-term-ms = <170>;
         };
+
         osmshift_meta: osmshift_meta {
             compatible = "zmk,behavior-tap-dance";
             label = "OSMSHIFT_META";
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&kp LS(LC(LEFT_ALT))>;
         };
+
         osmshift_meta2: osmshift_meta2 {
             compatible = "zmk,behavior-hold-tap";
             label = "OSMSHIFT_META2";
@@ -80,10 +82,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp KP_EQUAL  &kp Q             &kp W        &kp E           &kp R                     &kp T          &kp Y            &lt 4 U          &kp I            &kp O        &kp P                 &kp RETURN
-&kp TAB       &lt 3 A           &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F            &kp G          &kp H            &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt RCTRL L  &kp SQT               &kp SEMI
-&kp KP_MINUS  &mt LEFT_SHIFT Z  &kp X        &kp C           &kp V                     &kp B          &kp N            &kp M            &kp COMMA        &kp DOT      &mt RIGHT_SHIFT FSLH  &kp UNDER
-                                             &sticky_hold    &mt LS(LC(LEFT_ALT)) ESC  &lt 1 SPACE    &lt 2 BACKSPACE  &kp DELETE       &sticky_hold
+&kp EQUAL  &kp Q             &kp W        &kp E           &kp R                     &kp T          &kp Y            &lt 4 U          &kp I            &kp O        &kp P                 &kp RETURN
+&kp TAB    &lt 3 A           &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_GUI F            &kp G          &kp H            &mt RIGHT_GUI J  &mt RIGHT_ALT K  &mt RCTRL L  &kp SEMICOLON         &kp SQT
+&kp MINUS  &mt LEFT_SHIFT Z  &kp X        &kp C           &kp V                     &kp B          &kp N            &kp M            &kp COMMA        &kp DOT      &mt RIGHT_SHIFT FSLH  &kp UNDER
+                                          &sticky_hold    &mt LS(LC(LEFT_ALT)) ESC  &lt 1 SPACE    &lt 2 BACKSPACE  &sticky_hold     &kp DEL
             >;
         };
 
@@ -97,7 +99,7 @@
             bindings = <
 &trans  &kp EXCL       &kp KP_EQUAL    &kp LPAR           &kp RPAR           &kp GREATER_THAN     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp N0             &trans
 &trans  &kp LESS_THAN  &mt LBKT LCTRL  &mt LEFT_ALT LBRC  &mt LEFT_GUI RBRC  &kp RIGHT_BRACKET    &kp LEFT    &kp DOWN       &kp UP        &kp RIGHT  &trans             &kp CAPSLOCK
-&trans  &kp UNDER      &kp MINUS       &kp PIPE           &kp GRAVE          &kp TILDE            &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &trans     &ext_power EP_TOG  &bootloader
+&trans  &trans         &kp MINUS       &kp PIPE           &kp BACKSLASH      &kp TILDE            &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &trans     &ext_power EP_TOG  &bootloader
                                        &trans             &trans             &trans               &trans      &trans         &trans
             >;
 
@@ -112,9 +114,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL         &kp KP_NUMBER_7        &kp KP_N8                 &kp KP_N9             &kp PRCNT    &kp PLUS   &kp AMPS         &kp KP_MULTIPLY        &kp KP_EQUAL     &kp RPAR  &kp DEL
-&trans  &trans           &mt LCTRL KP_NUMBER_4  &mt LEFT_ALT KP_NUMBER_5  &mt LGUI KP_NUMBER_6  &kp COMMA    &kp MINUS  &mt RGUI DOLLAR  &mt RIGHT_ALT PERCENT  &mt RCTRL CARET  &kp BSLH  &kp GRAVE
-&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1        &kp KP_NUMBER_2           &kp KP_NUMBER_3       &kp DOT      &kp UNDER  &kp PLUS         &kp AT                 &kp HASH         &kp PIPE  &kp TILDE
+&trans  &kp EXCL         &kp KP_NUMBER_7        &kp KP_N8                 &kp KP_N9             &kp PRCNT    &kp PLUS   &kp AMPS         &kp KP_MULTIPLY        &kp KP_EQUAL     &kp RPAR   &kp DEL
+&trans  &trans           &mt LCTRL KP_NUMBER_4  &mt LEFT_ALT KP_NUMBER_5  &mt LGUI KP_NUMBER_6  &kp COMMA    &kp MINUS  &mt RGUI DOLLAR  &mt RIGHT_ALT PERCENT  &mt RCTRL CARET  &kp COLON  &kp GRAVE
+&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1        &kp KP_NUMBER_2           &kp KP_NUMBER_3       &kp DOT      &kp DOT    &kp PLUS         &kp AT                 &kp HASH         &trans     &kp TILDE
                                                 &trans                    &trans                &trans       &trans     &trans           &trans
             >;
 
