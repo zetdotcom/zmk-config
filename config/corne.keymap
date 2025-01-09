@@ -105,10 +105,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL       &kp KP_EQUAL    &kp LPAR           &kp RPAR           &kp GREATER_THAN     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp N0  &trans
-&trans  &kp LESS_THAN  &mt LBKT LCTRL  &mt LEFT_ALT LBRC  &mt LEFT_GUI RBRC  &kp RIGHT_BRACKET    &kp LEFT    &kp DOWN       &kp UP        &kp RIGHT  &trans  &kp CAPSLOCK
-&trans  &trans         &kp MINUS       &kp PIPE           &kp BACKSLASH      &kp TILDE            &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &trans     &trans  &trans
-                                       &trans             &trans             &trans               &trans      &trans         &trans
+&trans  &kp EXCL       &kp KP_EQUAL    &kp ASTERISK          &kp RPAR           &kp GREATER_THAN     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp N0  &trans
+&trans  &kp LESS_THAN  &mt LBKT LCTRL  &mt LEFT_ALT PERCENT  &mt LEFT_GUI RBRC  &kp RIGHT_BRACKET    &kp LEFT    &kp DOWN       &kp UP        &kp RIGHT  &trans  &kp CAPSLOCK
+&trans  &trans         &kp MINUS       &kp PIPE              &kp BACKSLASH      &kp TILDE            &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &trans     &trans  &trans
+                                       &trans                &trans             &trans               &trans      &trans         &trans
             >;
 
             label = "nav";
@@ -122,10 +122,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL         &kp KP_NUMBER_7        &kp KP_N8                 &kp KP_N9             &kp PRCNT    &kp PLUS   &kp AMPS         &kp KP_MULTIPLY        &kp KP_EQUAL     &kp RPAR       &kp DEL
-&trans  &trans           &mt LCTRL KP_NUMBER_4  &mt LEFT_ALT KP_NUMBER_5  &mt LGUI KP_NUMBER_6  &kp COMMA    &kp MINUS  &mt RGUI DOLLAR  &mt RIGHT_ALT PERCENT  &mt RCTRL CARET  &kp SEMICOLON  &kp GRAVE
-&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1        &kp KP_NUMBER_2           &kp KP_NUMBER_3       &kp DOT      &kp DOT    &kp PLUS         &kp AT                 &kp HASH         &trans         &kp TILDE
-                                                &trans                    &trans                &trans       &trans     &trans           &trans
+&trans  &kp EXCL         &kp AMPERSAND     &kp ASTERISK          &kp TILDE       &kp PRCNT    &kp PLUS   &kp N7             &kp N8            &kp N9              &kp EQUAL  &trans
+&trans  &trans           &mt LCTRL DOLLAR  &mt LEFT_ALT PERCENT  &mt LGUI CARET  &kp COMMA    &kp MINUS  &mt RGUI NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &kp N0     &kp GRAVE
+&trans  &kp KP_NUMBER_0  &kp PIPE          &kp AT_SIGN           &kp HASH        &kp DOT      &kp DOT    &kp NUMBER_1       &kp NUMBER_2      &kp NUMBER_3        &kp SLASH  &kp TILDE
+                                           &trans                &trans          &trans       &trans     &trans             &trans
             >;
 
             label = "num+sym";
@@ -145,7 +145,7 @@
         brackets {
             bindings = <
 &trans  &kp EXCL        &kp EQUAL  &kp LPAR          &kp RPAR           &kp GT                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LT          &kp COLON  &kp LBRC          &kp RBRC           &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LT          &kp SLASH  &kp LBRC          &kp RBRC           &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp UNDERSCORE  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE                &trans  &trans  &trans  &trans  &trans  &trans
                                    &trans            &trans             &trans                   &trans  &trans  &trans
             >;
