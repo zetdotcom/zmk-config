@@ -105,10 +105,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL       &kp AMPERSAND         &kp ASTERISK          &kp PIPE            &kp GREATER_THAN     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp N0  &trans
-&trans  &kp LESS_THAN  &mt LBKT DOLLAR       &mt LEFT_ALT PERCENT  &mt LEFT_GUI CARET  &kp RIGHT_BRACKET    &kp LEFT    &kp DOWN       &kp UP        &kp RIGHT  &trans  &kp CAPSLOCK
-&trans  &trans         &kp NON_US_BACKSLASH  &kp AT_SIGN           &kp HASH            &kp TILDE            &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &trans     &trans  &trans
-                                             &trans                &trans              &trans               &trans      &trans         &trans
+&trans  &kp EXCL       &kp AMPERSAND    &kp ASTERISK          &kp PIPE            &kp GREATER_THAN     &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp N0  &trans
+&trans  &kp LESS_THAN  &mt LBKT DOLLAR  &mt LEFT_ALT PERCENT  &mt LEFT_GUI CARET  &kp RIGHT_BRACKET    &kp LEFT    &kp DOWN       &kp UP        &kp RIGHT  &trans  &kp CAPSLOCK
+&trans  &trans         &kp BACKSLASH    &kp AT_SIGN           &kp HASH            &kp TILDE            &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &trans     &trans  &trans
+                                        &trans                &trans              &trans               &trans      &trans         &trans
             >;
 
             label = "nav";
