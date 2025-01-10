@@ -21,8 +21,9 @@
         compatible = "zmk,combos";
 
         screenshot {
-            bindings = <&kp LG(LS(KP_NUMBER_4))>;
+            bindings = <&kp LG(LS(KP_NUMBER_8))>;
             key-positions = <40 10>;
+            layers = <0>;
         };
 
         alt-tab {
@@ -79,6 +80,15 @@
         };
     };
 
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -122,10 +132,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL         &kp AMPERSAND         &kp ASTERISK          &kp PIPE        &kp PRCNT    &kp PLUS   &kp N7             &kp N8            &kp N9              &kp EQUAL        &trans
-&trans  &trans           &mt LCTRL DOLLAR      &mt LEFT_ALT PERCENT  &mt LGUI CARET  &kp COMMA    &kp MINUS  &mt RGUI NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &kp N0           &kp GRAVE
-&trans  &kp KP_NUMBER_0  &kp NON_US_BACKSLASH  &kp AT_SIGN           &kp HASH        &kp DOT      &kp DOT    &kp NUMBER_1       &kp NUMBER_2      &kp NUMBER_3        &kp KP_NUMBER_0  &kp TILDE
-                                               &trans                &trans          &trans       &trans     &trans             &trans
+&trans  &kp EXCL                &kp AMPERSAND         &kp ASTERISK          &kp PIPE        &kp PRCNT    &kp PLUS   &kp N7             &kp N8            &kp N9              &kp EQUAL                    &trans
+&trans  &trans                  &mt LCTRL DOLLAR      &mt LEFT_ALT PERCENT  &mt LGUI CARET  &kp COMMA    &kp MINUS  &mt RGUI NUMBER_4  &mt RIGHT_ALT N5  &mt RCTRL NUMBER_6  &kp N0                       &kp GRAVE
+&trans  &mt LSHIFT KP_NUMBER_0  &kp NON_US_BACKSLASH  &kp AT_SIGN           &kp HASH        &kp DOT      &kp DOT    &kp NUMBER_1       &kp NUMBER_2      &kp NUMBER_3        &mt RIGHT_SHIFT KP_NUMBER_0  &kp TILDE
+                                                      &trans                &trans          &trans       &trans     &trans             &trans
             >;
 
             label = "num+sym";
